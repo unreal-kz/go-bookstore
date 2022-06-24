@@ -11,11 +11,11 @@ import (
 	"github.com/unreal-kz/go-bookstore/pkg/utils"
 )
 
-var NewBook models.Book
+// var NewBooks *models.Book
 
 func GetBooks(w http.ResponseWriter, r *http.Request) {
 	newBooks := models.GetAllBooks()
-
+	// newBooks := NewBooks.GetAllBooks()
 	res, _ := json.Marshal(newBooks)
 	w.Header().Set("Content-Type", "pkglication/json")
 	w.WriteHeader(http.StatusOK)
