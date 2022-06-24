@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/unreal-kz/pkg/go-bookstore/pkg/models"
-	"github.com/unreal-kz/pkg/go-bookstore/pkg/utils"
+	"github.com/unreal-kz/go-bookstore/pkg/models"
+	"github.com/unreal-kz/go-bookstore/pkg/utils"
 )
 
 var NewBook models.Book
