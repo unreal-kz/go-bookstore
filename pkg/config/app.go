@@ -1,21 +1,22 @@
 package config
 
 import (
+	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var (
-	db *grom.DB
+	db *gorm.DB
 )
 
 func Connect() {
-	d, err := grom.Open("mysql", "baubek:B@123/simplerest?charset=utf8&parseTime=True&loc=Local")
+	d, err := gorm.Open("mysql", "baubek:B@123/simplerest?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
 	db = d
 }
 
-func GetDB() *grom.DB {
+func GetDB() *gorm.DB {
 	return db
 }
